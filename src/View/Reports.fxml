@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.ReportController"
+            stylesheets="@../css/dashboard.css"
+            prefWidth="1000"
+            prefHeight="650">
+
+    <top>
+
+        <VBox spacing="5" style="-fx-padding:20;">
+
+            <Label text="System Reports"
+                   styleClass="page-title"/>
+
+            <Label text="Overall statistics of the Car Rental Management System."
+                   styleClass="page-subtitle"/>
+
+        </VBox>
+
+    </top>
+
+    <center>
+
+        <VBox spacing="20"
+              style="-fx-padding:20;">
+
+            <VBox spacing="20"
+                  styleClass="chart-card">
+
+                <padding>
+                    <Insets top="25"
+                            right="30"
+                            bottom="25"
+                            left="30"/>
+                </padding>
+
+                <GridPane hgap="20"
+                          vgap="18">
+
+                    <columnConstraints>
+
+                        <ColumnConstraints percentWidth="45"/>
+
+                        <ColumnConstraints percentWidth="55"/>
+
+                    </columnConstraints>
+
+                    <Label text="Total Vehicles"/>
+                    <Label fx:id="lblTotalVehicles"
+                           GridPane.columnIndex="1"
+                           text="0"/>
+
+                    <Label text="Available Vehicles"
+                           GridPane.rowIndex="1"/>
+                    <Label fx:id="lblAvailable"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="1"
+                           text="0"/>
+
+                    <Label text="Rented Vehicles"
+                           GridPane.rowIndex="2"/>
+                    <Label fx:id="lblRented"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="2"
+                           text="0"/>
+
+                    <Label text="Total Customers"
+                           GridPane.rowIndex="3"/>
+                    <Label fx:id="lblTotalCustomers"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="3"
+                           text="0"/>
+
+                    <Label text="Total Rentals"
+                           GridPane.rowIndex="4"/>
+                    <Label fx:id="lblTotalRentals"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="4"
+                           text="0"/>
+
+                    <Label text="Total Revenue"
+                           GridPane.rowIndex="5"/>
+                    <Label fx:id="lblTotalRevenue"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="5"
+                           text="Rs. 0"/>
+
+                    <Label text="Most Expensive Vehicle"
+                           GridPane.rowIndex="6"/>
+                    <Label fx:id="lblMostExpensive"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="6"
+                           text="N/A"/>
+
+                    <Label text="Most Rented Vehicle"
+                           GridPane.rowIndex="7"/>
+                    <Label fx:id="lblMostRented"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="7"
+                           text="N/A"/>
+
+                </GridPane>
+
+                <Separator/>
+
+                <Label text="Report generated automatically from current data."
+                       style="-fx-font-size:13px;
+                              -fx-text-fill:gray;"/>
+
+            </VBox>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

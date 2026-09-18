@@ -1,0 +1,2 @@
+V001,Toyota,Corolla,50.0,false,corolla.jpg
+V005,BMW,M3,790.0,false,default.jpg

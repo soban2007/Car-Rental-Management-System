@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15.0" style="-fx-padding: 30;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateVehicleController">
+   <children>
+      <Label text="Update Vehicle Entry" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+      <GridPane vgap="10.0" hgap="10.0">
+         <children>
+            <Label text="Vehicle ID:"/>
+            <TextField fx:id="txtId" editable="false" disable="true" GridPane.columnIndex="1"/>
+            <Label text="Brand:" GridPane.rowIndex="1"/>
+            <TextField fx:id="txtBrand" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Label text="Model:" GridPane.rowIndex="2"/>
+            <TextField fx:id="txtModel" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <Label text="Price Per Day:" GridPane.rowIndex="3"/>
+            <TextField fx:id="txtPrice" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+            <Label text="Availability Status:" GridPane.rowIndex="4"/>
+            <CheckBox fx:id="chkAvailable" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+            <Label text="Image Source:" GridPane.rowIndex="5"/>
+            <ComboBox fx:id="comboImages" GridPane.columnIndex="1" GridPane.rowIndex="5" prefWidth="150.0"/>
+         </children>
+      </GridPane>
+      <HBox spacing="10.0">
+         <children>
+            <Button text="Modify Asset" onAction="#handleUpdate" style="-fx-background-color: #3498db; -fx-text-fill: white;"/>
+            <Button text="Cancel" onAction="#handleCancel"/>
+         </children>
+      </HBox>
+   </children>
+</VBox>

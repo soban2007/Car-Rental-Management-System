@@ -1,0 +1,2 @@
+1,Toyota Crolla,Gli,7000.0,true,corolla.jpg
+2,toyata,xli,1000.0,true,corolla.jpg

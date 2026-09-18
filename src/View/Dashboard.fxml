@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.DashboardController"
+            stylesheets="@../css/dashboard.css"
+            prefWidth="1400"
+            prefHeight="850">
+
+    <!-- ================= LEFT SIDEBAR ================= -->
+
+    <left>
+
+        <VBox prefWidth="240"
+              spacing="8"
+              styleClass="sidebar">
+
+            <padding>
+                <Insets top="20" right="15" bottom="20" left="15"/>
+            </padding>
+
+            <Label text="🚗"
+                   styleClass="logo-icon"/>
+
+            <Label text="CAR RENTAL"
+                   styleClass="logo-title"/>
+
+            <Label text="Management System"
+                   styleClass="logo-subtitle"/>
+
+            <Separator/>
+
+            <Button text="🏠 Dashboard"
+                    onAction="#showDashboard"
+                    maxWidth="Infinity"
+                    styleClass="menu-button"/>
+
+            <Button text="🚘 Vehicles"
+                    onAction="#showVehicles"
+                    maxWidth="Infinity"
+                    styleClass="menu-button"/>
+
+            <Button text="👤 Customers"
+                    onAction="#showCustomers"
+                    maxWidth="Infinity"
+                    styleClass="menu-button"/>
+
+            <Button text="📄 Rentals"
+                    onAction="#showRentals"
+                    maxWidth="Infinity"
+                    styleClass="menu-button"/>
+
+            <Button text="📜 Rental History"
+                    onAction="#showHistory"
+                    maxWidth="Infinity"
+                    styleClass="menu-button"/>
+
+            <Button text="📊 Reports"
+                    onAction="#showReports"
+                    maxWidth="Infinity"
+                    styleClass="menu-button"/>
+
+            <Pane VBox.vgrow="ALWAYS"/>
+
+            <Button text="🚪 Logout"
+                    onAction="#handleLogout"
+                    maxWidth="Infinity"
+                    styleClass="logout-button"/>
+
+        </VBox>
+
+    </left>
+
+    <!-- ================= CENTER ================= -->
+
+    <center>
+
+        <StackPane fx:id="contentArea">
+
+            <ScrollPane fitToWidth="true"
+                        fitToHeight="true"
+                        hbarPolicy="NEVER"
+                        style="-fx-background-color:transparent;">
+
+                <VBox spacing="25"
+                      style="-fx-padding:25;">
+
+                    <!-- ================= TOP BAR ================= -->
+
+                    <HBox alignment="CENTER_LEFT"
+                          spacing="20"
+                          styleClass="top-bar">
+
+                        <VBox spacing="5">
+
+                            <Label text="Dashboard"
+                                   styleClass="page-title"/>
+
+                            <Label text="Welcome to Car Rental Management System"
+                                   styleClass="page-subtitle"/>
+
+                        </VBox>
+
+                        <Pane HBox.hgrow="ALWAYS"/>
+
+                        <TextField promptText="🔍 Search..."
+                                   prefWidth="250"
+                                   styleClass="search-field"/>
+
+                        <VBox alignment="CENTER_RIGHT"
+                              spacing="2">
+
+                            <Label fx:id="lblDate"
+                                   text="Date"
+                                   styleClass="date-label"/>
+
+                            <Label fx:id="lblTime"
+                                   text="Time"
+                                   styleClass="date-label"/>
+
+                        </VBox>
+
+                        <Button text="🔔"
+                                styleClass="icon-button"/>
+
+                        <Button text="⚙"
+                                styleClass="icon-button"/>
+
+                        <Button text="👤 Admin"
+                                styleClass="profile-button"/>
+
+                    </HBox>
+
+                    <!-- ================= DASHBOARD CARDS ================= -->
+
+                    <GridPane hgap="20"
+                              vgap="20">
+
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="33"/>
+                            <ColumnConstraints percentWidth="33"/>
+                            <ColumnConstraints percentWidth="34"/>
+                        </columnConstraints>
+
+                        <rowConstraints>
+                            <RowConstraints/>
+                            <RowConstraints/>
+                        </rowConstraints>
+                                                <!-- ================= TOTAL VEHICLES ================= -->
+
+                        <VBox GridPane.rowIndex="0"
+                              GridPane.columnIndex="0"
+                              spacing="10"
+                              styleClass="dashboard-card card-blue">
+
+                            <Label text="🚗"
+                                   styleClass="card-icon"/>
+
+                            <Label text="Total Vehicles"
+                                   styleClass="card-title"/>
+
+                            <Label fx:id="lblTotalVehicles"
+                                   text="0"
+                                   styleClass="card-value"/>
+
+                        </VBox>
+
+                        <!-- ================= AVAILABLE ================= -->
+
+                        <VBox GridPane.rowIndex="0"
+                              GridPane.columnIndex="1"
+                              spacing="10"
+                              styleClass="dashboard-card card-green">
+
+                            <Label text="✅"
+                                   styleClass="card-icon"/>
+
+                            <Label text="Available Vehicles"
+                                   styleClass="card-title"/>
+
+                            <Label fx:id="lblAvailable"
+                                   text="0"
+                                   styleClass="card-value"/>
+
+                        </VBox>
+
+                        <!-- ================= RENTED ================= -->
+
+                        <VBox GridPane.rowIndex="0"
+                              GridPane.columnIndex="2"
+                              spacing="10"
+                              styleClass="dashboard-card card-orange">
+
+                            <Label text="🚘"
+                                   styleClass="card-icon"/>
+
+                            <Label text="Rented Vehicles"
+                                   styleClass="card-title"/>
+
+                            <Label fx:id="lblRented"
+                                   text="0"
+                                   styleClass="card-value"/>
+
+                        </VBox>
+
+                        <!-- ================= CUSTOMERS ================= -->
+
+                        <VBox GridPane.rowIndex="1"
+                              GridPane.columnIndex="0"
+                              spacing="10"
+                              styleClass="dashboard-card card-purple">
+
+                            <Label text="👤"
+                                   styleClass="card-icon"/>
+
+                            <Label text="Customers"
+                                   styleClass="card-title"/>
+
+                            <Label fx:id="lblCustomers"
+                                   text="0"
+                                   styleClass="card-value"/>
+
+                        </VBox>
+
+                        <!-- ================= RENTALS ================= -->
+
+                        <VBox GridPane.rowIndex="1"
+                              GridPane.columnIndex="1"
+                              spacing="10"
+                              styleClass="dashboard-card card-yellow">
+
+                            <Label text="📄"
+                                   styleClass="card-icon"/>
+
+                            <Label text="Total Rentals"
+                                   styleClass="card-title"/>
+
+                            <Label fx:id="lblRentals"
+                                   text="0"
+                                   styleClass="card-value"/>
+
+                        </VBox>
+
+                        <!-- ================= REVENUE ================= -->
+
+                        <VBox GridPane.rowIndex="1"
+                              GridPane.columnIndex="2"
+                              spacing="10"
+                              styleClass="dashboard-card card-cyan">
+
+                            <Label text="💰"
+                                   styleClass="card-icon"/>
+
+                            <Label text="Revenue"
+                                   styleClass="card-title"/>
+
+                            <Label fx:id="lblRevenue"
+                                   text="Rs. 0"
+                                   styleClass="card-value"/>
+
+                        </VBox>
+
+                    </GridPane>
+
+                    <!-- ================= QUICK ACTION BUTTONS ================= -->
+
+                    <HBox spacing="20"
+                          alignment="CENTER_LEFT">
+
+                        <Button text="➕ Add Vehicle"
+                                styleClass="action-button"/>
+
+                        <Button text="👤 Add Customer"
+                                styleClass="action-button"/>
+
+                        <Button text="📝 New Rental"
+                                styleClass="action-button"/>
+
+                        <Button text="📊 View Reports"
+                                styleClass="action-button"/>
+
+                    </HBox>
+                                        <!-- ================= CHARTS ================= -->
+
+                    <HBox spacing="20">
+
+                        <VBox spacing="10"
+                              HBox.hgrow="ALWAYS"
+                              styleClass="chart-card">
+
+                            <Label text="Revenue Overview"
+                                   styleClass="section-title"/>
+
+                            <BarChart fx:id="revenueChart"
+                                      animated="false"
+                                      legendVisible="false"
+                                      prefHeight="320">
+
+                                <xAxis>
+                                    <CategoryAxis/>
+                                </xAxis>
+
+                                <yAxis>
+                                    <NumberAxis/>
+                                </yAxis>
+
+                            </BarChart>
+
+                        </VBox>
+
+                        <VBox spacing="10"
+                              prefWidth="350"
+                              styleClass="chart-card">
+
+                            <Label text="Vehicle Status"
+                                   styleClass="section-title"/>
+
+                            <PieChart fx:id="statusChart"
+                                      legendSide="BOTTOM"
+                                      labelsVisible="true"
+                                      prefHeight="320"/>
+
+                        </VBox>
+
+                    </HBox>
+
+                    <!-- ================= RECENT RENTALS ================= -->
+
+                    <VBox spacing="15"
+                          styleClass="table-card">
+
+                        <Label text="Recent Rentals"
+                               styleClass="section-title"/>
+
+                        <TableView prefHeight="260">
+
+                            <columns>
+
+                                <TableColumn text="Rental ID"
+                                             prefWidth="120"/>
+
+                                <TableColumn text="Customer"
+                                             prefWidth="170"/>
+
+                                <TableColumn text="Vehicle"
+                                             prefWidth="180"/>
+
+                                <TableColumn text="Date"
+                                             prefWidth="150"/>
+
+                                <TableColumn text="Amount"
+                                             prefWidth="120"/>
+
+                                <TableColumn text="Status"
+                                             prefWidth="140"/>
+
+                            </columns>
+
+                        </TableView>
+
+                    </VBox>
+
+                </VBox>
+
+            </ScrollPane>
+
+        </StackPane>
+
+    </center>
+
+</BorderPane>

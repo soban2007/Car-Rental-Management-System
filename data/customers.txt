@@ -1,0 +1,3 @@
+CUS001,Ali Ahmed,03001234567,ali@gmail.com,35202-1234567-1,Rawalpindi
+CUS002,Usman Khan,03112223344,usman@gmail.com,35202-9876543-2,Islamabad
+CUS003,zohaib raza,03486604195,yutar34@gmail.com,5678-76728873-1,south africa

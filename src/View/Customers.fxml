@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.CustomerController"
+            stylesheets="@../css/dashboard.css"
+            prefWidth="1300"
+            prefHeight="700">
+
+    <!-- Header -->
+
+    <top>
+
+        <VBox spacing="5"
+              style="-fx-padding:20;">
+
+            <Label text="Customer Management"
+                   styleClass="page-title"/>
+
+            <Label text="Manage all registered customers."
+                   styleClass="page-subtitle"/>
+
+        </VBox>
+
+    </top>
+
+    <!-- Center -->
+
+    <center>
+
+        <VBox spacing="20"
+              style="-fx-padding:20;">
+
+            <!-- Search Bar -->
+
+            <HBox spacing="12"
+                  alignment="CENTER_LEFT">
+
+                <TextField fx:id="txtSearch"
+                           promptText="Search Customer..."
+                           prefWidth="320"
+                           styleClass="search-field"/>
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <Button text="+ Add Customer"
+                        onAction="#openAddUi"
+                        styleClass="action-button"/>
+
+                <Button text="Update"
+                        onAction="#openUpdateUi"
+                        styleClass="menu-button"/>
+
+                <Button text="Delete"
+                        onAction="#handleDelete"
+                        styleClass="logout-button"/>
+
+            </HBox>
+
+            <!-- Customer Table -->
+
+            <VBox VBox.vgrow="ALWAYS"
+                  styleClass="chart-card">
+
+                <TableView fx:id="tableCustomers"
+                           VBox.vgrow="ALWAYS">
+
+                    <columns>
+
+                        <TableColumn fx:id="colId"
+                                     text="Customer ID"
+                                     prefWidth="120"/>
+
+                        <TableColumn fx:id="colName"
+                                     text="Full Name"
+                                     prefWidth="220"/>
+
+                        <TableColumn fx:id="colPhone"
+                                     text="Phone Number"
+                                     prefWidth="160"/>
+
+                        <TableColumn fx:id="colEmail"
+                                     text="Email"
+                                     prefWidth="220"/>
+
+                        <TableColumn fx:id="colCnic"
+                                     text="CNIC"
+                                     prefWidth="180"/>
+
+                        <TableColumn fx:id="colAddress"
+                                     text="Address"
+                                     prefWidth="300"/>
+
+                    </columns>
+
+                </TableView>
+
+            </VBox>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

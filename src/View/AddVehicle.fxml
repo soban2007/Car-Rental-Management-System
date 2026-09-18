@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.AddVehicleController"
+            stylesheets="@../css/dashboard.css"
+            prefWidth="700"
+            prefHeight="520">
+
+    <top>
+        <VBox spacing="5" style="-fx-padding:20;">
+            <Label text="Add New Vehicle"
+                   styleClass="page-title"/>
+
+            <Label text="Fill all vehicle information below."
+                   styleClass="page-subtitle"/>
+        </VBox>
+    </top>
+
+    <center>
+
+        <VBox spacing="25"
+              styleClass="chart-card"
+              BorderPane.alignment="CENTER">
+
+            <padding>
+                <Insets top="20" right="30" bottom="20" left="30"/>
+            </padding>
+
+            <GridPane hgap="20" vgap="18">
+
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="35"/>
+                    <ColumnConstraints percentWidth="65"/>
+                </columnConstraints>
+
+                <Label text="Vehicle ID"/>
+                <TextField fx:id="txtId"
+                           GridPane.columnIndex="1"
+                           promptText="Enter Vehicle ID"/>
+
+                <Label text="Brand"
+                       GridPane.rowIndex="1"/>
+                <TextField fx:id="txtBrand"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="1"
+                           promptText="Toyota"/>
+
+                <Label text="Model"
+                       GridPane.rowIndex="2"/>
+                <TextField fx:id="txtModel"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="2"
+                           promptText="Corolla"/>
+
+                <Label text="Price Per Day"
+                       GridPane.rowIndex="3"/>
+                <TextField fx:id="txtPrice"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="3"
+                           promptText="5000"/>
+
+                <Label text="Vehicle Image"
+                       GridPane.rowIndex="4"/>
+                <ComboBox fx:id="comboImages"
+                          GridPane.columnIndex="1"
+                          GridPane.rowIndex="4"
+                          prefWidth="300"/>
+
+                <Label text="Availability"
+                       GridPane.rowIndex="5"/>
+                <ComboBox fx:id="comboAvailability"
+                          GridPane.columnIndex="1"
+                          GridPane.rowIndex="5"
+                          prefWidth="300"/>
+
+            </GridPane>
+
+            <Separator/>
+
+            <HBox spacing="15"
+                  alignment="CENTER_RIGHT">
+
+                <Button text="Cancel"
+                        onAction="#handleCancel"
+                        styleClass="logout-button"/>
+
+                <Button text="Save Vehicle"
+                        onAction="#handleSave"
+                        styleClass="action-button"/>
+
+            </HBox>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

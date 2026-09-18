@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.UpdateCustomerController"
+            stylesheets="@../css/dashboard.css"
+            prefWidth="700"
+            prefHeight="520">
+
+    <!-- Header -->
+
+    <top>
+
+        <VBox spacing="5"
+              style="-fx-padding:20;">
+
+            <Label text="Update Customer"
+                   styleClass="page-title"/>
+
+            <Label text="Modify customer information."
+                   styleClass="page-subtitle"/>
+
+        </VBox>
+
+    </top>
+
+    <!-- Form -->
+
+    <center>
+
+        <VBox spacing="25"
+              styleClass="chart-card">
+
+            <padding>
+                <Insets top="20"
+                        right="30"
+                        bottom="20"
+                        left="30"/>
+            </padding>
+
+            <GridPane hgap="20"
+                      vgap="18">
+
+                <columnConstraints>
+
+                    <ColumnConstraints percentWidth="35"/>
+
+                    <ColumnConstraints percentWidth="65"/>
+
+                </columnConstraints>
+
+                <!-- Customer ID -->
+
+                <Label text="Customer ID"/>
+
+                <TextField fx:id="txtId"
+                           GridPane.columnIndex="1"
+                           editable="false"
+                           disable="true"
+                           styleClass="search-field"/>
+
+                <!-- Name -->
+
+                <Label text="Full Name"
+                       GridPane.rowIndex="1"/>
+
+                <TextField fx:id="txtName"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="1"
+                           styleClass="search-field"/>
+
+                <!-- Phone -->
+
+                <Label text="Phone Number"
+                       GridPane.rowIndex="2"/>
+
+                <TextField fx:id="txtPhone"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="2"
+                           styleClass="search-field"/>
+
+                <!-- Email -->
+
+                <Label text="Email"
+                       GridPane.rowIndex="3"/>
+
+                <TextField fx:id="txtEmail"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="3"
+                           styleClass="search-field"/>
+
+                <!-- CNIC -->
+
+                <Label text="CNIC"
+                       GridPane.rowIndex="4"/>
+
+                <TextField fx:id="txtCnic"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="4"
+                           styleClass="search-field"/>
+
+                <!-- Address -->
+
+                <Label text="Address"
+                       GridPane.rowIndex="5"/>
+
+                <TextArea fx:id="txtAddress"
+                          GridPane.columnIndex="1"
+                          GridPane.rowIndex="5"
+                          prefRowCount="3"
+                          wrapText="true"/>
+
+            </GridPane>
+
+            <Separator/>
+
+            <HBox spacing="15"
+                  alignment="CENTER_RIGHT">
+
+                <Button text="Cancel"
+                        onAction="#handleCancel"
+                        styleClass="logout-button"/>
+
+                <Button text="Update Customer"
+                        onAction="#handleUpdate"
+                        styleClass="action-button"/>
+
+            </HBox>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

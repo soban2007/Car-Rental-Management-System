@@ -1,0 +1,259 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
+.root-pane{
+    -fx-background-color:#F4F7FB;
+    -fx-font-family:"Segoe UI";
+}
+
+/* ===========================
+   LEFT BRAND PANEL
+=========================== */
+
+.brand-panel{
+
+    -fx-background-color:linear-gradient(to bottom,#2563EB,#1E3A8A);
+
+    -fx-padding:40;
+
+}
+
+.brand-icon{
+
+    -fx-font-size:72;
+
+}
+
+.brand-title{
+
+    -fx-font-size:34;
+
+    -fx-font-weight:bold;
+
+    -fx-text-fill:white;
+
+}
+
+.brand-subtitle{
+
+    -fx-font-size:20;
+
+    -fx-text-fill:white;
+
+}
+
+.brand-tagline{
+
+    -fx-font-size:15;
+
+    -fx-text-fill:#E2E8F0;
+
+}
+
+/* ===========================
+   RIGHT FORM PANEL
+=========================== */
+
+.form-panel{
+
+    -fx-background-color:#F8FAFC;
+
+}
+
+.form-card{
+
+    -fx-background-color:white;
+
+    -fx-padding:40;
+
+    -fx-background-radius:20;
+
+    -fx-border-radius:20;
+
+    -fx-effect:dropshadow(
+            gaussian,
+            rgba(0,0,0,.18),
+            18,
+            0,
+            0,
+            8
+    );
+
+}
+
+/* ===========================
+   TITLES
+=========================== */
+
+.form-title{
+
+    -fx-font-size:30;
+
+    -fx-font-weight:bold;
+
+}
+
+.form-subtitle{
+
+    -fx-font-size:14;
+
+    -fx-text-fill:#64748B;
+
+}
+
+/* ===========================
+   LABELS
+=========================== */
+
+.field-label{
+
+    -fx-font-size:14;
+
+    -fx-font-weight:bold;
+
+}
+
+/* ===========================
+   TEXT FIELDS
+=========================== */
+
+.form-field{
+
+    -fx-pref-height:44;
+
+    -fx-font-size:14;
+
+    -fx-background-radius:10;
+
+    -fx-border-radius:10;
+
+    -fx-border-color:#CBD5E1;
+
+}
+
+.form-field:focused{
+
+    -fx-border-color:#2563EB;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.btn-primary{
+
+    -fx-background-color:#2563EB;
+
+    -fx-text-fill:white;
+
+    -fx-font-size:15;
+
+    -fx-font-weight:bold;
+
+    -fx-background-radius:10;
+
+    -fx-pref-height:45;
+
+    -fx-cursor:hand;
+
+}
+
+.btn-primary:hover{
+
+    -fx-background-color:#1D4ED8;
+
+}
+
+.btn-primary:pressed{
+
+    -fx-scale-x:.98;
+
+    -fx-scale-y:.98;
+
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+.switch-link{
+
+    -fx-text-fill:#2563EB;
+
+    -fx-font-weight:bold;
+
+}
+
+.switch-link:hover{
+
+    -fx-underline:true;
+
+}
+
+.forgot-link{
+
+    -fx-text-fill:#2563EB;
+
+}
+
+/* ===========================
+   CHECKBOX
+=========================== */
+
+.remember-check{
+
+    -fx-font-size:13;
+
+}
+
+/* ===========================
+   ERROR LABELS
+=========================== */
+
+.error-label{
+
+    -fx-text-fill:#DC2626;
+
+    -fx-font-size:12;
+
+}
+
+.error-banner{
+
+    -fx-background-color:#FEE2E2;
+
+    -fx-text-fill:#B91C1C;
+
+    -fx-padding:10;
+
+    -fx-background-radius:8;
+
+}
+
+/* ===========================
+   DIVIDER
+=========================== */
+
+.divider-label{
+
+    -fx-text-fill:#64748B;
+
+}
+
+/* ===========================
+   SCROLLPANE
+=========================== */
+
+.scroll-pane{
+
+    -fx-background-color:transparent;
+
+}
+
+.scroll-pane>.viewport{
+
+    -fx-background-color:#F8FAFC;
+
+}

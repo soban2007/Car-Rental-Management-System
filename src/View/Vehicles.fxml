@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.VehicleController"
+            stylesheets="@../css/dashboard.css">
+
+    <!-- ================= TOP ================= -->
+
+    <top>
+
+        <VBox spacing="15"
+              style="-fx-padding:20;">
+
+            <Label text="Vehicle Management"
+                   styleClass="page-title"/>
+
+            <HBox spacing="15"
+                  alignment="CENTER_LEFT">
+
+                <TextField fx:id="txtSearch"
+                           promptText="🔍 Search Vehicle..."
+                           prefWidth="300"
+                           styleClass="search-field"/>
+
+                <Button text="➕ Add Vehicle"
+                        onAction="#openAddUi"
+                        styleClass="action-button"/>
+
+                <Button text="✏ Update"
+                        onAction="#openUpdateUi"
+                        styleClass="action-button"/>
+
+                <Button text="🗑 Delete"
+                        onAction="#handleDelete"
+                        styleClass="action-button"/>
+
+                <Button text="🔄 Refresh"
+                        onAction="#loadVehicles"
+                        styleClass="action-button"/>
+
+            </HBox>
+
+        </VBox>
+
+    </top>
+
+    <!-- ================= CENTER ================= -->
+
+    <center>
+
+        <HBox spacing="20"
+              style="-fx-padding:20;">
+
+            <!-- ================= TABLE ================= -->
+
+            <VBox spacing="10"
+                  HBox.hgrow="ALWAYS"
+                  styleClass="table-card">
+
+                <Label text="Vehicle List"
+                       styleClass="section-title"/>
+
+                <TableView fx:id="tableVehicles"
+                           VBox.vgrow="ALWAYS">
+
+                    <columns>
+
+                        <TableColumn fx:id="colId"
+                                     text="ID"
+                                     prefWidth="70"/>
+
+                        <TableColumn fx:id="colBrand"
+                                     text="Brand"
+                                     prefWidth="130"/>
+
+                        <TableColumn fx:id="colModel"
+                                     text="Model"
+                                     prefWidth="140"/>
+
+                        <TableColumn fx:id="colPrice"
+                                     text="Price / Day"
+                                     prefWidth="120"/>
+
+                        <TableColumn fx:id="colAvailable"
+                                     text="Status"
+                                     prefWidth="120"/>
+
+                    </columns>
+
+                </TableView>
+
+            </VBox>
+
+            <!-- ================= RIGHT PANEL ================= -->
+
+            <VBox spacing="20"
+                  prefWidth="320">
+
+                <!-- Preview Card -->
+
+                <VBox spacing="12"
+                      alignment="CENTER"
+                      styleClass="chart-card">
+
+                    <Label text="Vehicle Preview"
+                           styleClass="section-title"/>
+
+                    <ImageView fx:id="imgPreview"
+                               fitWidth="260"
+                               fitHeight="170"
+                               preserveRatio="true"/>
+
+                </VBox>
+
+                <!-- Details Card -->
+
+                <VBox spacing="10"
+                      styleClass="chart-card">
+
+                    <Label text="Vehicle Details"
+                           styleClass="section-title"/>
+
+                    <Separator/>
+
+                    <Label fx:id="lblBrand"
+                           text="Brand : -"/>
+
+                    <Label fx:id="lblModel"
+                           text="Model : -"/>
+
+                    <Label fx:id="lblPrice"
+                           text="Price : -"/>
+
+                    <Label fx:id="lblStatus"
+                           text="Status : -"/>
+
+                </VBox>
+
+            </VBox>
+
+        </HBox>
+
+    </center>
+
+</BorderPane>

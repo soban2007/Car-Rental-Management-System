@@ -1,0 +1,1299 @@
+/*======================================================
+        CAR RENTAL MANAGEMENT SYSTEM
+        PROFESSIONAL DASHBOARD THEME
+        Part 1
+=======================================================*/
+
+/*================ ROOT ================*/
+
+.root{
+
+    -fx-font-family: "Segoe UI";
+
+    -fx-background-color:#f5f7fb;
+
+    -fx-font-size:14px;
+
+}
+
+/*================ SIDEBAR ================*/
+
+.sidebar{
+
+    -fx-background-color:linear-gradient(
+            to bottom,
+            #111827 0%,
+            #1e293b 50%,
+            #0f172a 100%
+    );
+
+    -fx-padding:22;
+
+    -fx-spacing:10;
+
+}
+
+/*================ LOGO ================*/
+
+.logo-icon{
+
+    -fx-font-size:42px;
+
+}
+
+.logo-title{
+
+    -fx-font-size:24px;
+
+    -fx-font-weight:bold;
+
+    -fx-text-fill:white;
+
+}
+
+.logo-subtitle{
+
+    -fx-font-size:13px;
+
+    -fx-text-fill:#cbd5e1;
+
+}
+
+/*================ MENU BUTTONS ================*/
+
+.menu-button{
+
+    -fx-background-color:transparent;
+
+    -fx-text-fill:white;
+
+    -fx-font-size:15px;
+
+    -fx-font-weight:bold;
+
+    -fx-padding:13 18;
+
+    -fx-background-radius:12;
+
+    -fx-border-radius:12;
+
+    -fx-alignment:CENTER_LEFT;
+
+    -fx-cursor:hand;
+
+}
+
+.menu-button:hover{
+
+    -fx-background-color:#2563eb;
+
+    -fx-text-fill:white;
+
+}
+
+.menu-button:pressed{
+
+    -fx-background-color:#1d4ed8;
+
+}
+
+/*================ ACTIVE MENU BUTTON ================*/
+
+.menu-button-active{
+
+    -fx-background-color:#2563eb;
+
+    -fx-text-fill:white;
+
+    -fx-font-weight:bold;
+
+    -fx-background-radius:12;
+
+}
+
+/*================ LOGOUT BUTTON ================*/
+
+.logout-button{
+
+    -fx-background-color:#ef4444;
+
+    -fx-text-fill:white;
+
+    -fx-font-size:15px;
+
+    -fx-font-weight:bold;
+
+    -fx-background-radius:12;
+
+    -fx-padding:13;
+
+    -fx-cursor:hand;
+
+}
+
+.logout-button:hover{
+
+    -fx-background-color:#dc2626;
+
+}
+
+.logout-button:pressed{
+
+    -fx-background-color:#b91c1c;
+
+}
+
+/*================ TOP BAR ================*/
+
+.top-bar{
+
+    -fx-background-color:white;
+
+    -fx-background-radius:18;
+
+    -fx-padding:20;
+
+    -fx-effect:dropshadow(
+
+            gaussian,
+
+            rgba(0,0,0,0.12),
+
+            15,
+
+            0,
+
+            0,
+
+            4
+
+    );
+
+}
+
+/*================ PAGE TITLE ================*/
+
+.page-title{
+
+    -fx-font-size:30px;
+
+    -fx-font-weight:bold;
+
+    -fx-text-fill:#111827;
+
+}
+
+.page-subtitle{
+
+    -fx-font-size:14px;
+
+    -fx-text-fill:#6b7280;
+
+}
+
+/*================ SEARCH BOX ================*/
+
+.search-field{
+
+    -fx-background-color:#f3f4f6;
+
+    -fx-background-radius:25;
+
+    -fx-border-radius:25;
+
+    -fx-border-color:transparent;
+
+    -fx-font-size:14px;
+
+    -fx-padding:12 16;
+
+}
+
+.search-field:focused{
+
+    -fx-background-color:white;
+
+    -fx-border-color:#2563eb;
+
+    -fx-border-width:2;
+
+}
+
+/*================ ICON BUTTON ================*/
+
+.icon-button{
+
+    -fx-background-color:white;
+
+    -fx-background-radius:100;
+
+    -fx-padding:10;
+
+    -fx-font-size:18px;
+
+    -fx-cursor:hand;
+
+}
+
+.icon-button:hover{
+
+    -fx-background-color:#e5e7eb;
+
+}
+
+/*================ PROFILE BUTTON ================*/
+
+.profile-button{
+
+    -fx-background-color:#2563eb;
+
+    -fx-text-fill:white;
+
+    -fx-font-size:14px;
+
+    -fx-font-weight:bold;
+
+    -fx-background-radius:30;
+
+    -fx-padding:10 22;
+
+    -fx-cursor:hand;
+
+}
+
+.profile-button:hover{
+
+    -fx-background-color:#1d4ed8;
+
+}
+
+/*================ DASHBOARD CARDS ================*/
+
+.dashboard-card{
+
+    -fx-background-radius:18;
+
+    -fx-padding:22;
+
+    -fx-effect:dropshadow(
+
+            gaussian,
+
+            rgba(0,0,0,0.18),
+
+            15,
+
+            0,
+
+            0,
+
+            5
+
+    );
+
+}
+
+/*================ CARD COLORS ================*/
+
+.card-blue{
+
+    -fx-background-color:linear-gradient(
+
+            to bottom right,
+
+            #3b82f6,
+
+            #2563eb
+
+    );
+
+}
+
+.card-green{
+
+    -fx-background-color:linear-gradient(
+
+            to bottom right,
+
+            #22c55e,
+
+            #16a34a
+
+    );
+
+}
+
+.card-orange{
+
+    -fx-background-color:linear-gradient(
+
+            to bottom right,
+
+            #fb923c,
+
+            #ea580c
+
+    );
+
+}
+
+.card-purple{
+
+    -fx-background-color:linear-gradient(
+
+            to bottom right,
+
+            #a855f7,
+
+            #7c3aed
+
+    );
+
+}
+
+.card-yellow{
+
+    -fx-background-color:linear-gradient(
+
+            to bottom right,
+
+            #facc15,
+
+            #ca8a04
+
+    );
+
+}
+
+.card-cyan{
+
+    -fx-background-color:linear-gradient(
+
+            to bottom right,
+
+            #06b6d4,
+
+            #0891b2
+
+    );
+
+}
+
+/*================ CARD TEXT ================*/
+
+.card-icon{
+
+    -fx-font-size:32px;
+
+}
+
+.card-title{
+
+    -fx-font-size:15px;
+
+    -fx-text-fill:white;
+
+}
+
+.card-value{
+
+    -fx-font-size:34px;
+
+    -fx-font-weight:bold;
+
+    -fx-text-fill:white;
+
+}
+/*======================================================
+        CAR RENTAL MANAGEMENT SYSTEM
+        PROFESSIONAL DASHBOARD THEME
+        Part 2
+=======================================================*/
+
+
+/*================ WHITE CONTENT CARDS ================*/
+
+.chart-card,
+.vehicle-card,
+.table-card,
+.form-card{
+
+    -fx-background-color:white;
+
+    -fx-background-radius:18;
+
+    -fx-border-radius:18;
+
+    -fx-padding:22;
+
+    -fx-effect:dropshadow(
+            gaussian,
+            rgba(0,0,0,0.10),
+            15,
+            0,
+            0,
+            4
+    );
+
+}
+
+
+/*================ SECTION TITLES ================*/
+
+.section-title{
+
+    -fx-font-size:20px;
+
+    -fx-font-weight:bold;
+
+    -fx-text-fill:#111827;
+
+}
+
+
+/*================ LABELS ================*/
+
+.label{
+
+    -fx-text-fill:#374151;
+
+}
+
+.form-label{
+
+    -fx-font-size:14px;
+
+    -fx-font-weight:bold;
+
+    -fx-text-fill:#1f2937;
+
+}
+
+
+/*================ TEXT FIELD ================*/
+
+.text-field{
+
+    -fx-background-color:white;
+
+    -fx-background-radius:10;
+
+    -fx-border-radius:10;
+
+    -fx-border-color:#d1d5db;
+
+    -fx-border-width:1.5;
+
+    -fx-padding:10 14;
+
+    -fx-font-size:14px;
+
+}
+
+.text-field:hover{
+
+    -fx-border-color:#93c5fd;
+
+}
+
+.text-field:focused{
+
+    -fx-border-color:#2563eb;
+
+    -fx-border-width:2;
+
+}
+
+
+/*================ PASSWORD FIELD ================*/
+
+.password-field{
+
+    -fx-background-color:white;
+
+    -fx-background-radius:10;
+
+    -fx-border-radius:10;
+
+    -fx-border-color:#d1d5db;
+
+    -fx-border-width:1.5;
+
+    -fx-padding:10 14;
+
+}
+
+.password-field:focused{
+
+    -fx-border-color:#2563eb;
+
+}
+
+
+/*================ TEXT AREA ================*/
+
+.text-area{
+
+    -fx-background-radius:12;
+
+    -fx-border-radius:12;
+
+    -fx-border-color:#d1d5db;
+
+}
+
+.text-area:focused{
+
+    -fx-border-color:#2563eb;
+
+}
+
+
+/*================ COMBO BOX ================*/
+
+.combo-box{
+
+    -fx-background-color:white;
+
+    -fx-background-radius:10;
+
+    -fx-border-radius:10;
+
+    -fx-border-color:#d1d5db;
+
+    -fx-padding:5;
+
+}
+
+.combo-box:hover{
+
+    -fx-border-color:#60a5fa;
+
+}
+
+.combo-box:focused{
+
+    -fx-border-color:#2563eb;
+
+}
+
+.combo-box .list-cell{
+
+    -fx-font-size:14px;
+
+}
+
+
+/*================ DATE PICKER ================*/
+
+.date-picker{
+
+    -fx-background-radius:10;
+
+    -fx-border-radius:10;
+
+    -fx-border-color:#d1d5db;
+
+}
+
+.date-picker:focused{
+
+    -fx-border-color:#2563eb;
+
+}
+
+
+/*================ BUTTONS ================*/
+
+.button{
+
+    -fx-background-radius:10;
+
+    -fx-font-size:14px;
+
+    -fx-font-weight:bold;
+
+    -fx-padding:10 18;
+
+    -fx-cursor:hand;
+
+}
+
+
+/* Primary */
+
+.action-button{
+
+    -fx-background-color:#2563eb;
+
+    -fx-text-fill:white;
+
+}
+
+.action-button:hover{
+
+    -fx-background-color:#1d4ed8;
+
+}
+
+
+/* Success */
+
+.success-button{
+
+    -fx-background-color:#16a34a;
+
+    -fx-text-fill:white;
+
+}
+
+.success-button:hover{
+
+    -fx-background-color:#15803d;
+
+}
+
+
+/* Warning */
+
+.warning-button{
+
+    -fx-background-color:#f59e0b;
+
+    -fx-text-fill:white;
+
+}
+
+.warning-button:hover{
+
+    -fx-background-color:#d97706;
+
+}
+
+
+/* Danger */
+
+.danger-button{
+
+    -fx-background-color:#ef4444;
+
+    -fx-text-fill:white;
+
+}
+
+.danger-button:hover{
+
+    -fx-background-color:#dc2626;
+
+}
+
+
+/* Secondary */
+
+.secondary-button{
+
+    -fx-background-color:#6b7280;
+
+    -fx-text-fill:white;
+
+}
+
+.secondary-button:hover{
+
+    -fx-background-color:#4b5563;
+
+}
+
+
+/*================ TABLE VIEW ================*/
+
+.table-view{
+
+    -fx-background-color:white;
+
+    -fx-background-radius:12;
+
+    -fx-border-radius:12;
+
+    -fx-border-color:#d1d5db;
+
+}
+
+
+/* Header */
+
+.table-view .column-header{
+
+    -fx-background-color:#2563eb;
+
+    -fx-pref-height:40;
+
+}
+
+.table-view .column-header .label{
+
+    -fx-text-fill:white;
+
+    -fx-font-weight:bold;
+
+    -fx-font-size:14px;
+
+}
+
+
+/* Rows */
+
+.table-row-cell{
+
+    -fx-cell-size:40;
+
+    -fx-background-color:white;
+
+}
+
+.table-row-cell:filled:hover{
+
+    -fx-background-color:#eff6ff;
+
+}
+
+.table-row-cell:filled:selected{
+
+    -fx-background-color:#dbeafe;
+
+}
+
+
+/*================ SCROLL PANE ================*/
+
+.scroll-pane{
+
+    -fx-background-color:transparent;
+
+}
+
+.scroll-pane>.viewport{
+
+    -fx-background-color:transparent;
+
+}
+
+
+/*================ IMAGE VIEW ================*/
+
+.image-view{
+
+    -fx-border-color:#d1d5db;
+
+    -fx-border-radius:12;
+
+    -fx-background-radius:12;
+
+}
+
+
+/*================ SEPARATOR ================*/
+
+.separator .line{
+
+    -fx-border-color:#e5e7eb;
+
+}
+
+
+/*================ STATUS LABELS ================*/
+
+.success-label{
+
+    -fx-text-fill:#16a34a;
+
+    -fx-font-weight:bold;
+
+}
+
+.warning-label{
+
+    -fx-text-fill:#d97706;
+
+    -fx-font-weight:bold;
+
+}
+
+.error-label{
+
+    -fx-text-fill:#dc2626;
+
+    -fx-font-weight:bold;
+
+}
+
+.info-label{
+
+    -fx-text-fill:#2563eb;
+
+    -fx-font-weight:bold;
+
+}
+/*======================================================
+        CAR RENTAL MANAGEMENT SYSTEM
+        PROFESSIONAL DASHBOARD THEME
+        Part 3
+=======================================================*/
+
+
+/*================ CHARTS ================*/
+
+.chart{
+
+    -fx-background-color:transparent;
+
+}
+
+.chart-title{
+
+    -fx-text-fill:#111827;
+
+    -fx-font-size:18px;
+
+    -fx-font-weight:bold;
+
+}
+
+.chart-legend{
+
+    -fx-background-color:transparent;
+
+}
+
+.chart-legend-item{
+
+    -fx-text-fill:#374151;
+
+    -fx-font-size:13px;
+
+}
+
+.chart-vertical-grid-lines{
+
+    -fx-stroke:#e5e7eb;
+
+}
+
+.chart-horizontal-grid-lines{
+
+    -fx-stroke:#e5e7eb;
+
+}
+
+.axis{
+
+    -fx-tick-label-fill:#374151;
+
+    -fx-font-size:12px;
+
+}
+
+
+/*================ BAR CHART ================*/
+
+.default-color0.chart-bar{
+
+    -fx-bar-fill:#2563eb;
+
+}
+
+.default-color1.chart-bar{
+
+    -fx-bar-fill:#16a34a;
+
+}
+
+.default-color2.chart-bar{
+
+    -fx-bar-fill:#f59e0b;
+
+}
+
+.default-color3.chart-bar{
+
+    -fx-bar-fill:#ef4444;
+
+}
+
+
+/*================ PIE CHART ================*/
+
+.default-color0.chart-pie{
+
+    -fx-pie-color:#2563eb;
+
+}
+
+.default-color1.chart-pie{
+
+    -fx-pie-color:#16a34a;
+
+}
+
+.default-color2.chart-pie{
+
+    -fx-pie-color:#f59e0b;
+
+}
+
+.default-color3.chart-pie{
+
+    -fx-pie-color:#ef4444;
+
+}
+
+
+/*================ REPORT VALUES ================*/
+
+.report-value{
+
+    -fx-font-size:17px;
+
+    -fx-font-weight:bold;
+
+    -fx-text-fill:#111827;
+
+}
+
+.report-heading{
+
+    -fx-font-size:22px;
+
+    -fx-font-weight:bold;
+
+    -fx-text-fill:#111827;
+
+}
+
+
+/*================ RENTAL HISTORY ================*/
+
+.history-card{
+
+    -fx-background-color:white;
+
+    -fx-background-radius:18;
+
+    -fx-padding:20;
+
+    -fx-effect:dropshadow(
+
+            gaussian,
+
+            rgba(0,0,0,0.10),
+
+            15,
+
+            0,
+
+            0,
+
+            4
+
+    );
+
+}
+
+
+/*================ STATUS BADGES ================*/
+
+.status-available{
+
+    -fx-background-color:#dcfce7;
+
+    -fx-text-fill:#15803d;
+
+    -fx-background-radius:20;
+
+    -fx-padding:4 12;
+
+    -fx-font-weight:bold;
+
+}
+
+.status-rented{
+
+    -fx-background-color:#fee2e2;
+
+    -fx-text-fill:#dc2626;
+
+    -fx-background-radius:20;
+
+    -fx-padding:4 12;
+
+    -fx-font-weight:bold;
+
+}
+
+.status-returned{
+
+    -fx-background-color:#dbeafe;
+
+    -fx-text-fill:#2563eb;
+
+    -fx-background-radius:20;
+
+    -fx-padding:4 12;
+
+    -fx-font-weight:bold;
+
+}
+
+
+/*================ LOGIN PAGE ================*/
+
+.login-root{
+
+    -fx-background-color:linear-gradient(
+
+            to bottom right,
+
+            #2563eb,
+
+            #1e40af
+
+    );
+
+}
+
+.login-card{
+
+    -fx-background-color:white;
+
+    -fx-background-radius:25;
+
+    -fx-padding:35;
+
+    -fx-effect:dropshadow(
+
+            gaussian,
+
+            rgba(0,0,0,0.30),
+
+            30,
+
+            0,
+
+            0,
+
+            10
+
+    );
+
+}
+
+.login-title{
+
+    -fx-font-size:28px;
+
+    -fx-font-weight:bold;
+
+    -fx-text-fill:#111827;
+
+}
+
+.login-subtitle{
+
+    -fx-font-size:14px;
+
+    -fx-text-fill:#6b7280;
+
+}
+
+
+/*================ LOGIN BUTTON ================*/
+
+.login-button{
+
+    -fx-background-color:#2563eb;
+
+    -fx-text-fill:white;
+
+    -fx-font-size:16px;
+
+    -fx-font-weight:bold;
+
+    -fx-background-radius:12;
+
+    -fx-padding:12 20;
+
+    -fx-cursor:hand;
+
+}
+
+.login-button:hover{
+
+    -fx-background-color:#1d4ed8;
+
+}
+
+
+/*================ FOOTER ================*/
+
+.footer{
+
+    -fx-background-color:white;
+
+    -fx-padding:10;
+
+}
+
+.footer-label{
+
+    -fx-text-fill:#6b7280;
+
+    -fx-font-size:13px;
+
+}
+
+
+/*================ SCROLL BAR ================*/
+
+.scroll-bar:vertical{
+
+    -fx-background-color:transparent;
+
+}
+
+.scroll-bar .thumb{
+
+    -fx-background-color:#cbd5e1;
+
+    -fx-background-radius:20;
+
+}
+
+.scroll-bar .thumb:hover{
+
+    -fx-background-color:#94a3b8;
+
+}
+
+
+/*================ TOOLTIP ================*/
+
+.tooltip{
+
+    -fx-background-color:#111827;
+
+    -fx-text-fill:white;
+
+    -fx-background-radius:8;
+
+    -fx-padding:8;
+
+}
+
+
+/*================ TABS ================*/
+
+.tab-pane{
+
+    -fx-background-color:transparent;
+
+}
+
+.tab{
+
+    -fx-background-color:#f3f4f6;
+
+    -fx-background-radius:10 10 0 0;
+
+}
+
+.tab:selected{
+
+    -fx-background-color:#2563eb;
+
+}
+
+.tab:selected .tab-label{
+
+    -fx-text-fill:white;
+
+}
+
+.tab-label{
+
+    -fx-font-weight:bold;
+
+}
+
+
+/*================ PROGRESS BAR ================*/
+
+.progress-bar{
+
+    -fx-accent:#2563eb;
+
+}
+
+
+/*================ CHECK BOX ================*/
+
+.check-box{
+
+    -fx-font-size:14px;
+
+}
+
+
+/*================ RADIO BUTTON ================*/
+
+.radio-button{
+
+    -fx-font-size:14px;
+
+}
+
+
+/*================ HOVER EFFECTS ================*/
+
+.dashboard-card:hover,
+
+.chart-card:hover,
+
+.vehicle-card:hover,
+
+.table-card:hover,
+
+.history-card:hover{
+
+    -fx-effect:dropshadow(
+
+            gaussian,
+
+            rgba(37,99,235,0.25),
+
+            20,
+
+            0,
+
+            0,
+
+            6
+
+    );
+
+}
+
+
+/*================ DISABLED ================*/
+
+.button:disabled,
+
+.text-field:disabled,
+
+.combo-box:disabled{
+
+    -fx-opacity:0.6;
+
+}
+
+
+/*================ END OF PROFESSIONAL THEME ================*/
